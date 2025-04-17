@@ -1,6 +1,14 @@
 function sumar(a,b){
     const res = a+b;
-    mostrarResultado("La suma es:" + res);
+    mostrarResultado("La suma es: " + res);
+}
+function restar(a,b){
+    const res = a-b;
+    mostrarResultado("La resta es: " + res);
+}
+
+function mostrarResultado(mensaje) {
+    document.getElementById('resultado').textContent = mensaje;
 }
 
 function calcular(){
@@ -15,6 +23,8 @@ function calcular(){
 
     if(oper === "+"){
         sumar(num1,num2);
+    }else if (oper === "-"){
+        restar(num1,num2);
     }else{
         mostrarResultado("Operación no válida. Usa + o -.")
     }
